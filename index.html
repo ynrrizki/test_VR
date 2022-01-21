@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scene Aframe</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script
+        src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+</head>
+
+<body>
+
+    <a-scene>
+        <a-assets>
+            <img src="texture/Brick/diginusa.jpg" id="diginusa">
+            <a-gltf-model id="build" src="texture/Brick/Incredible.gltf" position="0 0.69 -14.990" scale="10 10 10">
+            </a-gltf-model>
+        </a-assets>
+        <a-box id="flat" material="color: #757575" geometry="height: 0.89; width: 1.42" position="0 1 0"
+            scale="2.45 0.15 30"></a-box>
+        <a-cylinder id="circle" material="color: #abc9d8" geometry="" position="0 -631.800 -14.99"
+            scale="10 -1265.51 10">
+        </a-cylinder>
+        <a-cylinder id="pedestal" material="color: #303030"
+            geometry="radius: 0.83; segmentsHeight: 17; segmentsRadial: 100" position="0 0.69 -14.990"
+            scale="2.52 1 2.52">
+        </a-cylinder>
+        <a-box id="statue" color="#ffffff" geometry="depth: 0.95; height: 0.72; width: 0.68" position="0 2.27 -14.990"
+            rotation="1.98 -24.07 -12.21"
+            animation="property: rotation; to: 0 360 0; dur: 2000; loop: true; dir: alternate;" src="#diginusa"></a-box>
+        <a-entity position="0 40.0727 -63.71467" material="wireframe: true" geometry="primitive: icosahedron"
+            scale="9.95 11.25 10.095">
+        </a-entity>
+        <a-entity position="0 40.0727 57.00685" material="wireframe: true" geometry="primitive: icosahedron"
+            scale="9.95 11.25 10.095">
+        </a-entity>
+        <a-entity position="0 88.31064 -35.56764" material="wireframe: true" geometry="primitive: icosahedron"
+            scale="9.95 11.25 10.095">
+        </a-entity>
+        <a-entity particle-system="preset:snow;"></a-entity>
+        <a-entity gltf-model="texture/Brick/Incredible.gltf" scale="0.03 0.08 0.05" position="0 0 -9.07"></a-entity>
+        <a-light type="ambient" color="sky">
+        </a-light>
+        <a-sky color="#262626"></a-sky>
+    </a-scene>
+
+</body>
+
+</html>
+<html>
+
+<head>
+</head>
+
+<body>
+</body>
+
+</html>
